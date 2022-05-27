@@ -1,0 +1,30 @@
+import React from "react";
+import "./VideoRow.css";
+function VideoRow({
+  views,
+  subs,
+  description,
+  timestamp,
+  channel,
+  title,
+  image,
+}) {
+  return (
+    <div className="vSideoRow">
+      <img src={image} />
+      <div className="videoRow__text">
+        <h3>{title}</h3>
+        <p className="videoRow__headline">
+          {channel}.
+          <span className="videoRowSubs">
+            <span className="videoRow__subsNumber">{subs}</span> Subscribers
+          </span>{" "}
+          {views}.{timestamp}
+        </p>
+        <p className="videoRow__description">{description}</p>
+      </div>
+    </div>
+  );
+}
+
+export default VideoRow;
